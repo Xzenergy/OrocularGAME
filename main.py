@@ -23,10 +23,10 @@ player.cursor.visible = False
 floor = Entity(model='cube', collider='box', color=color.gray, scale=(20, 0.1, 20), position=(0, -0.5, 0))
 
 # Walls
-wall_north = Entity(model='cube', color=color.white, scale=(20, 10, 0.5), position=(0, 4.5, 10))
-wall_south = Entity(model='cube', color=color.white, scale=(20, 10, 0.5), position=(0, 4.5, -10))
-wall_east = Entity(model='cube', color=color.white, scale=(0.5, 10, 20), position=(10, 4.5, 0))
-wall_west = Entity(model='cube', color=color.white, scale=(0.5, 10, 20), position=(-10, 4.5, 0))
+wall_north = Entity(model='cube', collider='box', color=color.white, scale=(20, 10, 0.5), position=(0, 4.5, 10))
+wall_south = Entity(model='cube', collider='box', color=color.white, scale=(20, 10, 0.5), position=(0, 4.5, -10))
+wall_east = Entity(model='cube', collider='box', color=color.white, scale=(0.5, 10, 20), position=(10, 4.5, 0))
+wall_west = Entity(model='cube', collider='box', color=color.white, scale=(0.5, 10, 20), position=(-10, 4.5, 0))
 
 # Ceiling
 ceiling = Entity(model='cube', color=color.light_gray, scale=(20, 0.1, 20), position=(0, 9, 0))
