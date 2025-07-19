@@ -19,7 +19,7 @@ player.cursor.visible = False
 
 # Create apartment environment
 # Floor
-#collider='cube' value gives the object collision detection
+#collider='box' value gives the object collision detection
 floor = Entity(model='cube', collider='box', color=color.gray, scale=(20, 0.1, 20), position=(0, -0.5, 0))
 
 # Walls
@@ -34,10 +34,10 @@ ceiling = Entity(model='cube', color=color.light_gray, scale=(20, 0.1, 20), posi
 # Furniture - Computer desk
 desk = Entity(model='cube', color=color.brown, scale=(3, 0.1, 1.5), position=(7, 0.5, 5))
 desk_legs = [
-    Entity(model='cube', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(6, 0, 4.5)),
-    Entity(model='cube', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(8, 0, 4.5)),
-    Entity(model='cube', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(6, 0, 5.5)),
-    Entity(model='cube', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(8, 0, 5.5))
+    Entity(model='cube', collider='box', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(6, 0, 4.5)),
+    Entity(model='cube', collider='box', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(8, 0, 4.5)),
+    Entity(model='cube', collider='box', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(6, 0, 5.5)),
+    Entity(model='cube', collider='box', color=color.dark_gray, scale=(0.1, 1, 0.1), position=(8, 0, 5.5))
 ]
 
 # Computer monitor (this will be interactive)
@@ -45,15 +45,15 @@ monitor = Entity(model='cube', color=color.black, scale=(1.2, 0.8, 0.1), positio
 monitor_screen = Entity(model='cube', color=color.dark_gray, scale=(1.1, 0.7, 0.05), position=(7, 1.2, 5.25))
 
 # Chair
-chair = Entity(model='cube', color=color.red, scale=(0.8, 0.1, 0.8), position=(7, 0.3, 3.5))
-chair_back = Entity(model='cube', color=color.red, scale=(0.8, 1.5, 0.1), position=(7, 1, 4))
+chair = Entity(model='cube', collider='box', color=color.red, scale=(0.8, 0.1, 0.8), position=(7, 0.3, 3.5))
+chair_back = Entity(model='cube', collider='box', color=color.red, scale=(0.8, 1.5, 0.1), position=(7, 1, 4))
 
 # Bed
 bed = Entity(model='cube', color=color.blue, scale=(2.5, 0.3, 4), position=(-6, 0.15, -4))
 pillow = Entity(model='cube', color=color.white, scale=(1, 0.2, 0.8), position=(-6, 0.4, -6))
 
 # Bookshelf
-bookshelf = Entity(model='cube', color=color.brown, scale=(0.3, 3, 2), position=(-8, 1.5, 6))
+bookshelf = Entity(model='cube', collider='box', color=color.brown, scale=(0.3, 3, 2), position=(-8, 1.5, 6))
 
 # Add some books
 for i in range(5):
